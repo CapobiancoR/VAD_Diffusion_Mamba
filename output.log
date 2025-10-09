@@ -1,0 +1,170 @@
+/home/shiva/miniconda3/envs/vmamba/lib/python3.10/site-packages/transformers/utils/generic.py:441: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  _torch_pytree._register_pytree_node(
+/home/shiva/miniconda3/envs/vmamba/lib/python3.10/site-packages/transformers/utils/generic.py:309: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  _torch_pytree._register_pytree_node(
+Checkpoint directory (DIFFUSION_BLOB_LOGDIR): /media/nvme_4tb/simone_data/log
+Logging to /tmp/openai-2024-12-05-16-42-55-199556
+Logger directory (logger.get_dir()): /tmp/openai-2024-12-05-16-42-55-199556
+1
+Logging to /tmp/openai-2024-12-05-16-42-55-241454
+-----------------------------------------------------------
+| anneal_type            | None                           |
+| attention_resolutions  | 16,8                           |
+| batch_size             | 2                              |
+| class_cond             | 0                              |
+| clip                   | 1                              |
+| data_dir               | /media/nvme_4tb/simone_data... |
+| decay                  | 0                              |
+| diffusion_steps        | 1e+03                          |
+| drop                   | 0                              |
+| dropout                | 0                              |
+| ema_rate               | 0.9999                         |
+| exclude_conditional    | 1                              |
+| fp16_scale_growth      | 0.001                          |
+| image_size             | 128                            |
+| learn_sigma            | 0                              |
+| log_interval           | 10                             |
+| lr                     | 2e-05                          |
+| lr_anneal_steps        | 0                              |
+| mask_range             | None                           |
+| max_num_mask_frames    | 4                              |
+| microbatch             | 2                              |
+| noise_schedule         | linear                         |
+| num_channels           | 128                            |
+| num_heads              | 4                              |
+| num_heads_upsample     | -1                             |
+| num_res_blocks         | 3                              |
+| predict_xstart         | 0                              |
+| rescale_learned_sigmas | 1                              |
+| rescale_timesteps      | 1                              |
+| resume_checkpoint      | /media/nvme_4tb/simone_data... |
+| rgb                    | 1                              |
+| save_interval          | 2e+03                          |
+| scale_time_dim         | 0                              |
+| schedule_sampler       | uniform                        |
+| seed                   | 123                            |
+| seq_len                | 12                             |
+| sigma_small            | 0                              |
+| steps_drop             | 0                              |
+| timestep_respacing     |                                |
+| uncondition_rate       | 0.25                           |
+| use_checkpoint         | 0                              |
+| use_fp16               | 0                              |
+| use_kl                 | 0                              |
+| use_scale_shift_norm   | 1                              |
+| weight_decay           | 0                              |
+-----------------------------------------------------------
+creating model and diffusion...
+cuda:0
+creating data loader...
+training...
+global batch size = 2
+loading model from checkpoint: /media/nvme_4tb/simone_data/log/model008000.pt
+loading optimizer state from checkpoint: /media/nvme_4tb/simone_data/log/opt008000.pt
+loading EMA from checkpoint: /media/nvme_4tb/simone_data/log/ema_0.9999_008000.pt...
+world_size: 1
+wandb: Currently logged in as: simonefacchiano (pinlab-sapienza). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.19.0 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.16.2
+wandb: Run data is saved locally in /home/simone/RaMViD/wandb/run-20241205_164323-u8f175v5
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run RaMViD-VideoMamba
+wandb: ⭐️ View project at https://wandb.ai/pinlab-sapienza/RaMViD
+wandb: 🚀 View run at https://wandb.ai/pinlab-sapienza/RaMViD/runs/u8f175v5
+------------------------
+| grad_norm | 0.129    |
+| loss      | 0.000284 |
+| loss_q2   | 0.000257 |
+| loss_q3   | 0.00031  |
+| mse       | 0.000284 |
+| mse_q2    | 0.000257 |
+| mse_q3    | 0.00031  |
+| samples   | 1.6e+04  |
+| step      | 8e+03    |
+------------------------
+saving model 0...
+Saving checkpoint to: /media/nvme_4tb/simone_data/log/model008000.pt
+saving model 0.9999...
+Saving checkpoint to: /media/nvme_4tb/simone_data/log/ema_0.9999_008000.pt
+------------------------
+| grad_norm | 0.151    |
+| loss      | 0.0141   |
+| loss_q0   | 0.0682   |
+| loss_q1   | 0.000866 |
+| loss_q2   | 0.000392 |
+| loss_q3   | 0.000277 |
+| mse       | 0.0141   |
+| mse_q0    | 0.0682   |
+| mse_q1    | 0.000866 |
+| mse_q2    | 0.000392 |
+| mse_q3    | 0.000277 |
+| samples   | 1.6e+04  |
+| step      | 8.01e+03 |
+------------------------
+------------------------
+| grad_norm | 0.0958   |
+| loss      | 0.00345  |
+| loss_q0   | 0.0113   |
+| loss_q1   | 0.00132  |
+| loss_q2   | 0.000424 |
+| loss_q3   | 0.000378 |
+| mse       | 0.00345  |
+| mse_q0    | 0.0113   |
+| mse_q1    | 0.00132  |
+| mse_q2    | 0.000424 |
+| mse_q3    | 0.000378 |
+| samples   | 1.6e+04  |
+| step      | 8.02e+03 |
+------------------------
+Traceback (most recent call last):
+  File "/home/simone/RaMViD/scripts/video_train.py", line 126, in <module>
+    main()
+  File "/home/simone/RaMViD/scripts/video_train.py", line 89, in main
+    ).run_loop()
+  File "/home/simone/RaMViD/diffusion_openai/train_util.py", line 220, in run_loop
+    self.run_step(batch, cond)
+  File "/home/simone/RaMViD/diffusion_openai/train_util.py", line 236, in run_step
+    self.forward_backward(batch, cond)
+  File "/home/simone/RaMViD/diffusion_openai/train_util.py", line 285, in forward_backward
+    loss.backward()
+  File "/home/shiva/miniconda3/envs/vmamba/lib/python3.10/site-packages/torch/_tensor.py", line 522, in backward
+    torch.autograd.backward(
+  File "/home/shiva/miniconda3/envs/vmamba/lib/python3.10/site-packages/torch/autograd/__init__.py", line 266, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt
+wandb: - 0.004 MB of 0.004 MB uploadedwandb: \ 0.004 MB of 0.004 MB uploadedwandb: | 0.004 MB of 0.004 MB uploadedwandb: / 0.004 MB of 0.004 MB uploadedwandb: - 0.010 MB of 0.023 MB uploaded (0.004 MB deduped)wandb: \ 0.023 MB of 0.023 MB uploaded (0.004 MB deduped)wandb: 
+wandb: Run history:
+wandb: learning_rate ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:          loss ▁▁▁█▁▁▁▁▁▁▁▁▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:       loss_q0 █▁▁▁▁▁▂▁▁▁▁▁▁▁
+wandb:       loss_q1 ▁▄▃▁▃▂▆▂▃▄▆▃▂▄▂█▅
+wandb:       loss_q2 ▂▁▁▇▃▄▂▄▂▃▄█
+wandb:       loss_q3 ▄▁▁▂▃▇▄▄▆▄▇█▇▅█
+wandb:           mse ▁▁▁█▁▁▁▁▁▁▁▁▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:        mse_q0 █▁▁▁▁▁▂▁▁▁▁▁▁▁
+wandb:        mse_q1 ▁▄▃▁▃▂▆▂▃▄▆▃▂▄▂█▅
+wandb:        mse_q2 ▂▁▁▇▃▄▂▄▂▃▄█
+wandb:        mse_q3 ▄▁▁▂▃▇▄▄▆▄▇█▇▅█
+wandb:       samples ▁▁▂▂▂▂▃▃▃▃▄▄▄▄▅▅▅▅▆▆▆▆▇▇▇▇██
+wandb:          step ▁▁▂▂▂▂▃▃▃▃▄▄▄▄▅▅▅▅▆▆▆▆▇▇▇▇██
+wandb: 
+wandb: Run summary:
+wandb: learning_rate 2e-05
+wandb:          loss 0.00063
+wandb:       loss_q0 0.00642
+wandb:       loss_q1 0.00198
+wandb:       loss_q2 0.00079
+wandb:       loss_q3 0.00044
+wandb:           mse 0.00063
+wandb:        mse_q0 0.00642
+wandb:        mse_q1 0.00198
+wandb:        mse_q2 0.00079
+wandb:        mse_q3 0.00044
+wandb:       samples 16056
+wandb:          step 8027
+wandb: 
+wandb: 🚀 View run RaMViD-VideoMamba at: https://wandb.ai/pinlab-sapienza/RaMViD/runs/u8f175v5
+wandb: ️⚡ View job at https://wandb.ai/pinlab-sapienza/RaMViD/jobs/QXJ0aWZhY3RDb2xsZWN0aW9uOjUwMDk5NzU5OQ==/version_details/v1
+wandb: Synced 6 W&B file(s), 0 media file(s), 2 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20241205_164323-u8f175v5/logs
