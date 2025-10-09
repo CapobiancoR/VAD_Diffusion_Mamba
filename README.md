@@ -87,7 +87,7 @@ Evaluation includes frame-level accuracy and average per-video accuracy.
 
 ### 4.2 Overview of Results
 The model is evaluated on **Avenue**, **ShanghaiTech Campus (STC)**, and **UBnormal** datasets.  
-Differences in accuracy across datasets are explained by the number of scenes and training steps per scene.
+Differences in accuracy across datasets are explained by the number of scenes and training steps per scene, computational constraints prohibited us from further training that would have lead to better results.
 
 | Method | Type | Avenue | STC | UBnormal |
 |:--------|:------|:------:|:----:|:---------:|
