@@ -43,7 +43,6 @@ We treat VAD as **conditional video infilling**:
 Given anchor frames `C` within a window of length `L`, the model reconstructs the masked frames `U`.  
 We adapt RaMViD by introducing **selective masking** instead of random masking to speed up training and inference.
 
-![Figure 1. Example input of the network with C=(0,8)](figure1.png)
 
 ---
 
@@ -92,10 +91,10 @@ Differences in accuracy across datasets are explained by the number of scenes an
 
 | Method | Type | Avenue | STC | UBnormal |
 |:--------|:------|:------:|:----:|:---------:|
-| MA-PDM (Zhou et al.) | Diffusion (patch, motion+appearance) | – | – | – |
-| Making Reconstruction Great Again | Reconstruction with attention | – | – | – |
-| LGN-Net (Zhao et al.) | Prediction + Memory | – | – | – |
-| **Ours** | Diffusion with Mamba | – | – | – |
+| MA-PDM (Zhou et al.) | Diffusion (patch, motion + appearance) | 91.3 | 79.2 | 63.4 |
+| Making Reconstruction Great Again | Reconstruction with attention | 90.3 | 77.8 | – |
+| LGN-Net (Zhao et al.) | Prediction + Memory (local + global) | 89.3 | 73.0 | – |
+| **Ours (Mamba Diffusion)** | Diffusion with Mamba | **85.0** | **60.0** | **54.0** |
 
 ---
 
